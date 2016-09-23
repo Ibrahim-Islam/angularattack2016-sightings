@@ -1,0 +1,49 @@
+.card {
+    padding: 16px;
+    background: #FFF;
+    box-shadow: 0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);
+    margin-bottom: 16px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+.post-detail-map {
+    height: 250px;
+}
+.post-detail-body {
+    min-height: 150px;
+}
+@media (min-width: 768px){
+    .post-detail-body-left {
+        border-right: rgba(0, 0, 0, 0.16) solid 1px;
+    }
+    .post-detail-body-right {
+        border-left: rgba(0, 0, 0, 0.16) solid 1px;
+    }
+}
+
+.post-in-brief {
+    font-weight: 400;
+}
+.post-detail-body .post-img {
+    height: 200px;
+    width: 232px;
+    overflow: hidden;
+}
+.add-post-comment .author {
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+}
+.post-comments {
+    min-height: 100px;
+}
+
+.case-open i {
+    font-size: 63px;
+    color: #ebeef2;
+}
+.case-closed i {
+    font-size: 63px;
+    color: #009688;
+}

@@ -1,0 +1,79 @@
+<!doctype html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <title>Sightings</title>
+    <base href="/">
+
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.9/css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.9/css/ripples.min.css">
+    <link rel="stylesheet" href="vendors/css/font-awesome.css">
+    <link rel="stylesheet" href="vendors/css/quill.snow.css" />
+    <link rel="stylesheet" href="vendors/css/toastr.css">
+    <link rel="stylesheet" href="site.css">
+    <!--<link rel="stylesheet" href="vendors/css/primeui-ng-all.min.css" />-->
+</head>
+<body>
+    <app>
+        <div class="showbox">
+            <div style="font-weight:bold">Please wait... The site might take some time to load :)</div>
+            <div class="loader">
+                <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                </svg>
+            </div>
+        </div>
+    </app>
+
+<script src="https://rumblex.s3.amazonaws.com/starter/es6-shim/es6-shim.min.js"></script>
+<script src="https://rumblex.s3.amazonaws.com/starter/zone.js/dist/zone.js"></script>
+<script src="https://rumblex.s3.amazonaws.com/starter/reflect-metadata/Reflect.js"></script>
+<!--<script src="https://rumblex.s3.amazonaws.com/starter/rxjs/bundles/Rx.umd.js"></script>-->
+
+
+    <!--<script src="vendors/js/es6-shim.js"></script>
+    <script src="vendors/js/zone.js"></script>
+    <script src="vendors/js/Reflect.js"></script>-->
+    <script src="vendors/js/system.src.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.9/js/material.min.js"></script>
+    <script src="vendors/js/quill.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.2/toastr.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEX72svuiCuaHAxYoLTwJpJ0yTQyqB-Dw"></script>
+    <!--<script src="vendors/js/primeui-ng-all.min.js"></script>-->
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('app').catch(function(err) {
+            console.error(err);
+        });
+        $.material.init();
+        toastr.options = {
+            "debug": false,
+            "positionClass": "toast-bottom-right",
+            "onclick": null,
+            "fadeIn": 300,
+            "fadeOut": 1000,
+            "timeOut": 3000,
+            "extendedTimeOut": 1000
+        };
+    </script>
+
+    <div id="shareBtnDom" class="hidden">
+        <div class="addthis_sharing_toolbox"></div>
+    </div>
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50e5a8352fd56b86"></script>
+    <script id="dsq-count-scr" src="//aattack-sightings.disqus.com/count.js" async></script>
+
+</body>
+</html>

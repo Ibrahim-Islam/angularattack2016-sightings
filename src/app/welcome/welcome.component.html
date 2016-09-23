@@ -1,0 +1,28 @@
+<section class="welcome-map">
+    <p-gmap [options]="options"
+            [style]="{'width':'100%', 'height':'400px'}"
+            [overlays]="overlays"
+            (onOverlayClick)="handleOverlayClick($event)" #gmap>
+    </p-gmap>
+</section>
+<section style="margin-top: 15px;border-top: #000 solid 3px;">
+    <div class="col-sm-6 welcome-left-side">
+        <p>An online community where </p>
+        <p>You can help people by finding their </p>
+        <p>items and get help finding yours </p>
+    </div>
+    <div class="col-sm-6 welcome-right-side">
+        <div class="features-list">
+            <p class="darker">You can:</p>
+            <ul>
+                <li class="red"><span>Create a lost post</span></li>
+                <li class="blue"><span>Create a found post</span></li>
+                <li class="orange"><span>Set location of last known location on a map</span></li>
+                <li class="gold"><span>People can help you through markers set on your post map</span></li>
+                <li class="blue"><span>Once done a post can be resolved</span></li>
+                <li class="orange"><span>Notifications to users when a post is created</span></li>
+            </ul>
+        </div>
+    </div>
+</section>
+

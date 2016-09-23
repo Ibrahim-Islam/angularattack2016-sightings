@@ -1,0 +1,46 @@
+{
+  "name": "sightings",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "gulp",
+    "tsc": "tsc",
+    "postinstall": "typings install",
+    "deploy": "surge ./dist"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@angular/common": "2.0.0-rc.1",
+    "@angular/compiler": "2.0.0-rc.1",
+    "@angular/core": "2.0.0-rc.1",
+    "@angular/platform-browser": "2.0.0-rc.1",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.1",
+    "@angular/router-deprecated": "2.0.0-rc.1",
+    "angularfire2": "^2.0.0-beta.0",
+    "bootstrap": "^3.3.6",
+    "bootstrap-material-design": "^0.5.9",
+    "es6-shim": "^0.35.1",
+    "firebase": "^2.4.2",
+    "font-awesome": "^4.6.1",
+    "jquery": "^2.2.3",
+    "primeng": "^1.0.0-beta.5",
+    "primeui": "^4.1.10",
+    "quill": "^0.20.1",
+    "reflect-metadata": "0.1.3",
+    "rxjs": "5.0.0-beta.6",
+    "toastr": "^2.1.2",
+    "zone.js": "0.6.12"
+  },
+  "devDependencies": {
+    "concurrently": "^2.0.0",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^4.0.0",
+    "gulp-load-plugins": "^1.2.2",
+    "gulp-shell": "^0.5.2",
+    "gulp-typescript": "^2.13.4",
+    "gulp-watch": "^4.3.5",
+    "rimraf": "^2.5.2",
+    "run-sequence": "^1.1.5",
+    "systemjs": "^0.19.27",
+    "typescript": "^1.8.10"
+  }
+}

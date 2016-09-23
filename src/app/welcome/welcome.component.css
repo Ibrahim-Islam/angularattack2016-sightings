@@ -1,0 +1,43 @@
+.welcome-map {
+    margin-top: -25px;
+}
+.welcome-left-side {
+    background-color: rgb(255, 87, 34);color: white;min-height: 260px;border-right: #000 solid 2px;
+}
+.welcome-left-side p {
+    font-weight: 700;
+    font-size: 38px;
+    text-align: right;
+    padding-right: 50px;
+}
+.welcome-right-side {
+    padding-left: 30px;
+    background-color: rgb(76, 175, 80);
+    min-height: 200px; color: white
+}
+.welcome-right-side p{
+    font-weight: 700;
+    font-size: 38px;
+}
+.features-list {
+    font-size: 22px;
+}
+.features-list ul li{
+    color: #f4b400;
+}
+.features-list .blue {
+    color: blue !important;
+}
+.features-list .red {
+    color: red !important;
+}
+.features-list .orange {
+    color: orange !important;
+}
+.features-list .gold {
+    color: gold !important;
+}
+
+.features-list ul li span {
+    color: white;
+}

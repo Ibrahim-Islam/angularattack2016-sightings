@@ -1,0 +1,18 @@
+@media (min-width: 768px) {
+    .right-vertical-bar {
+        border-right: #E8DFDF solid 1px;
+    }
+}
+.post-map {
+    height: 250px;
+    border: #F7F1F1 solid 1px;
+    margin-top: 10px;
+}
+.img-preview {
+    border: #E8DFDF solid 1px;
+    height: 200px;
+    width: 200px;
+}
+.find-btn {
+    padding: 5px;
+}

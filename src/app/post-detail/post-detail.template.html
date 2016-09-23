@@ -1,0 +1,74 @@
+<div class="post-detail-card">
+    <section class="post-detail-map card">
+        <p-gmap [options]="options"
+                [style]="{'width':'100%', 'height':'218px'}"
+                [overlays]="overlays"
+                (onMapClick)="handleMapClick($event)"
+                (onOverlayClick)="handleOverlayClick($event)" #gmap>
+        </p-gmap>
+    </section>
+    <section>
+        <div class="col-sm-12 post-detail-body card">
+            <div class="col-sm-3 post-detail-body-left">
+                <div class="post-img">
+                    <img class="img-responsive" [src]="post.image">
+                </div>
+                <hr>
+                <p><span>Created on - {{post.date | date}}</span></p>
+                <p><span>Created by - {{post.name}}</span></p>
+                <hr>
+                <div class="share-btn-area">
+                    <div id="share-button" class="text-center">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9 post-detail-body-right">
+                <div class="pull-right case-open" [ngClass]="post.status === 'Closed'? 'case-closed': ''" style="margin-top: -10px;">
+                    <i class="fa fa-check-circle pull-right"></i>
+                    <span [hidden]="post.status === 'Closed' || !owner ">
+                        <a href="javascript:void(0)" class="btn btn-raised btn-primary" (click)="markAsResolve()">Mark as resolve</a>
+                    </span>
+                </div>
+                <div class="col-sm-12 post-title-data">
+                    <h2 style="margin-top: 0">
+                        <a>{{post.title}}</a>
+                    </h2>
+                </div>
+                <div class="col-sm-12 post-meta-desc">
+                    <div class="post-in-brief">
+                        <span [innerHTML]="post.body"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="col-sm-12 add-post-comment card">
+            <div id="disqus_thread"></div>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </div>
+    </section>
+</div>
+
+
+<div id="setlocation" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Location of the item</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+            <label for="textArea" class="col-md-2 control-label">Extra Details</label>
+            <div class="col-md-10">
+                <textarea class="form-control" rows="3" [(ngModel)]="details"></textarea>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button (click)="AddSourceLocation()" type="button" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+</div>

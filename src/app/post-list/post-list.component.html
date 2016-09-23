@@ -1,0 +1,59 @@
+<div class="col-md-10 col-md-offset-1">
+    <div class="item" *ngFor="let post of posts">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="post-header">
+                    <div class="post-author-img">
+                        <a [routerLink]="['/User', {id: post.uid}]">
+                            <i *ngIf="!post.profileImageURL" class="fa fa-user-secret" aria-hidden="true"></i>
+                            <img *ngIf="post.profileImageURL" class="img-responsive" [src]="post.profileImageURL">
+                        </a>
+                    </div>
+                    <div class="post-author-info">
+                        <p>
+                            <a [routerLink]="['/User', {id: post.uid}]"><strong>{{post.name}}</strong></a>
+                            <span class="label label-default" style="color:white;font-weight: normal;" *ngIf="post.type === PostType.Found">{{PostType[post.type]}} Something</span>
+                            <span class="label label-warning" style="color:white;font-weight: normal;" *ngIf="post.type === PostType.Lost">{{PostType[post.type]}} Something</span>
+                            <span class="label label-success" style="color:white;font-weight: normal;" *ngIf="post.status === STATUS[STATUS.Closed]">RESOLVED</span>
+                        </p>
+                        <p>posted at {{post.date | date}}</p>
+                    </div>
+                </div>
+                <div class="col-sm-2 img-part">
+                    <div class="post-img">
+                        <i *ngIf="!post.profileImageURL" class="fa fa-file-image-o" aria-hidden="true"></i>
+                        <a [routerLink]="['/PostDetail', {id: post.key}]">
+                            <img *ngIf="post.profileImageURL" class="img-responsive img-thumbnail img-thumbnail-extend" [src]="post.image">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-10 text-part">
+                <div class="post-title">
+                    <h2>
+                        <a [routerLink]="['/PostDetail', {id: post.key}]">{{post.title}}</a>
+                    </h2>
+                </div>
+                <div class="post-body">
+                    <div class="post-desc">
+                        <span [innerHTML]="post.body"></span>
+                        </div>
+                        <strong><a [routerLink]="['/PostDetail', {id: post.key}]">Read more</a></strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="well" *ngIf="loading">
+        <span class="fa fa-circle-o-notch fa-spin fa-2x"></span>
+        <span style="font-weight: bold;">Loading posts feed...</span>
+    </div>
+
+    <div class="alert alert-success" *ngIf="!loading && (!posts || !posts.length)">
+        <h4>
+            <span class="fa fa-feed"></span>
+            No posts are available,
+            <a [routerLink]="['/PostNew']" href="javascript:void(0)" class="alert-link">create a post to start</a>.
+        </h4>
+    </div>
+</div>
